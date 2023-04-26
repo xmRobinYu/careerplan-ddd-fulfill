@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "5cbf81f7-458e-4059-8f40-7a7982999f4d",
+		"name": "DDD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查询被风控拦截的履约单",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8015/fulfill/order/intercepted",
+					"host": [
+						"localhost"
+					],
+					"port": "8015",
+					"path": [
+						"fulfill",
+						"order",
+						"intercepted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "审核被风控拦截的履约单",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fulfillId\":\"1818433336\",\n    \"auditResult\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8015/fulfill/order/intercepted/audit",
+					"host": [
+						"localhost"
+					],
+					"port": "8015",
+					"path": [
+						"fulfill",
+						"order",
+						"intercepted",
+						"audit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "模拟发送订单已支付事件",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8015/fulfill/orderPayedEvent/mock?orderId=10010102023414",
+					"host": [
+						"localhost"
+					],
+					"port": "8015",
+					"path": [
+						"fulfill",
+						"orderPayedEvent",
+						"mock"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "10010102023414"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

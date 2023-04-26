@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruyuan.fulfill.infrastructure.gatewayimpl.database.mapper.FulfillOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap"
+               type="com.ruyuan.fulfill.infrastructure.gatewayimpl.database.dataobject.FulfillOrderDO">
+        <id column="id" property="id"/>
+        <result column="order_id" property="fulfillID"/>
+        <result column="origin_amount" property="originAmount"/>
+        <result column="pay_amount" property="payAmount"/>
+        <result column="pay_type" property="payType"/>
+        <result column="fulfill_id" property="fulfillId"/>
+        <result column="user_id" property="userId"/>
+        <result column="warehouse_id" property="warehouseId"/>
+        <result column="fulfill_status" property="fulfillStatus"/>
+        <result column="risk_status" property="riskStatus"/>
+        <result column="manual_review_status" property="manualReviewStatus"/>
+        <result column="logistics_id" property="logisticsId"/>
+        <result column="delivery_address" property="deliveryAddress"/>
+        <result column="delivery_mode" property="deliveryMode"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="area" property="area"/>
+        <result column="street" property="street"/>
+        <result column="receiver_name" property="receiverName"/>
+        <result column="detail_address" property="deliveryAddress"/>
+        <result column="receiver_phone" property="receiverPhone"/>
+        <result column="lon" property="lon"/>
+        <result column="lat" property="lat"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id
+        , order_id ,origin_amount ,pay_amount ,pay_type ,fulfill_id ,user_id ,warehouse_id ,fulfill_status ,risk_status ,manual_review_status ,logistics_id ,delivery_address ,delivery_mode ,province, city, area, street, receiver_name, detail_address, receiver_phone, lon, lat, gmt_create , gmt_modified
+    </sql>
+
+</mapper>
